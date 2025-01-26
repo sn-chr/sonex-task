@@ -21,11 +21,10 @@ const fetchAllTokens = async () => {
     tokens.push(...data.tokens);
     skip += limit; // Move to the next batch
   }
-
-  console.log(`Fetched ${tokens.length} tokens.`);
+  
   tokens.forEach((token, index) => {
     console.log(
-      `${index + 1}. ${token.name} (${token.symbol}) - Address: ${token.id}, Volume (USD): $${parseFloat(token.volumeUSD).toFixed(2)}`
+      `${index + 1}. ${token.name} (${token.symbol}) - Address: ${token.id}, Price (USD): $${parseFloat(token.volumeUSD).toFixed(2)}`
     );
   });
 
